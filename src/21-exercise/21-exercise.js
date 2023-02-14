@@ -42,7 +42,18 @@
  */
 
 // Create the Person class
-class Person {}
+class Person {
+    constructor(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    sayName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+const person = new Person('Ana', 'Spark');
 
 // Create a new instance of the `Person` class with the arguments:
 //
@@ -50,10 +61,22 @@ class Person {}
 // lastName: "Spark"
 //
 // Store the new instance in the `Ana` variable
-const ana = "";
+const ana = person;
 
 // Create the Employee class that extends the Person class
-class Employee {}
+class Employee extends Person {
+    constructor(firstName, lastName, jobTitle){
+        super(firstName, lastName);
+
+        this.jobTitle = jobTitle;
+    }
+
+    getJobTitle(){
+        return this.jobTitle;
+    }
+}
+
+const employee = new Employee('Peter', 'Jackson', 'Developer');
 
 // Create a new instance of the `Employee` class with the arguments:
 //
@@ -62,7 +85,7 @@ class Employee {}
 // jobTitle: "Developer"
 //
 // Store the new instance in the `peter` variable
-const peter = "";
+const peter = employee;
 
 // Don’t change the code below this line
 export { Person, Employee, ana, peter };

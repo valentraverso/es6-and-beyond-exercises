@@ -23,12 +23,18 @@
     "@types/jest": "27.4.1",
     "babel-jest": "27.5.1",
     "jest": "27.5.1",
+    "node": "^16.19.0",
     "parcel": "2.4.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.17.0",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
     "eslint": "8.11.0",
-    "jest-transform-stub": "2.0.0"
+    "jest-transform-stub": "2.0.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "util": "^0.12.5"
   },
   "jest": {
     "testEnvironment": "jsdom",
